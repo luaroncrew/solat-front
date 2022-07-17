@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-500 via-purple-500 to-blue-500...">
+    <div className="bg-gradient-to-r from-purple-500 via-purple-500 to-blue-500">
     
     
     
