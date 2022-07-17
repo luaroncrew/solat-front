@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body {
   padding: 0;
@@ -13,4 +16,43 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #0070f3;
+}
+
+.event-field-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 280px;
+  background-color: #444463;
+  color: #eaeaea;
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 10px;
+  margin: 10px;
+
+}
+.event-field-big {
+  height: 100px;
+  width: 350px;
+  background-color: #444463;
+  color: #eaeaea;
+}
+
+.list-event-card {
+  display: flex;
+  justify-content: center;
+  height: 470px;
+  width: 340px;
+  background-color: #1F66A0;
+
 }
