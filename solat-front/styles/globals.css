@@ -63,8 +63,6 @@ a {
   height: 620px;
   width: 340px;
   border-radius: 10px;
-  /*background: rgb(226,7,189);*/
-  /*background: linear-gradient(90deg, rgba(226,7,189,1) 0%, rgba(6,231,12,1) 0%, rgba(0,212,255,1) 100%);*/
   background: rgb(255,105,248);
   background: linear-gradient(90deg, rgba(255,105,248,1) 0%, rgba(6,213,255,1) 100%);
 }
