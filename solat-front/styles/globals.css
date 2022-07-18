@@ -24,7 +24,7 @@ a {
   flex-direction: row;
   justify-content: space-between;
   height: 80px;
-  background-color: #0070f3;
+  background-color: #00d79f;
 }
 
 .event-field-small {
@@ -33,7 +33,7 @@ a {
   align-items: center;
   height: 50px;
   width: 280px;
-  background-color: #444463;
+  background-color: rgba(0, 0, 0, 0.5);
   color: #eaeaea;
   border-radius: 8px;
   font-size: 18px;
@@ -47,7 +47,7 @@ a {
   align-items: center;
   height: 150px;
   width: 280px;
-  background-color: #444463;
+  background-color: rgba(0, 0, 0, 0.5);
   color: #eaeaea;
   border-radius: 8px;
   font-size: 18px;
@@ -58,9 +58,15 @@ a {
 .event-card {
   display: flex;
   flex-direction: column;
-  height: 470px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 620px;
   width: 340px;
-  background-color: #1F66A0;
+  border-radius: 10px;
+  /*background: rgb(226,7,189);*/
+  /*background: linear-gradient(90deg, rgba(226,7,189,1) 0%, rgba(6,231,12,1) 0%, rgba(0,212,255,1) 100%);*/
+  background: rgb(255,105,248);
+  background: linear-gradient(90deg, rgba(255,105,248,1) 0%, rgba(6,213,255,1) 100%);
 }
 
 .event-card-content {
@@ -68,4 +74,30 @@ a {
   flex-direction: column;
   justify-content: center;
   margin: auto;
+}
+
+.banner {
+  width: 340px;
+  height: 150px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+}
+
+.event-button {
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 280px;
+  background: rgb(203, 17, 188);
+  color: #eaeaea;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.event-button:hover {
+  background: rgb(255, 25, 234);
 }

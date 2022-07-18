@@ -1,23 +1,23 @@
 import React, {FC} from "react";
 import {Footer, Navbar} from "./index";
+import Image from "next/image";
+import {text} from "stream/consumers";
 
-
-function Header() {
-    return <div className={'header'}>
-        <div className={'logo'}>
-            SOLAT
-        </div>
-        <div>
-            <button className={'connect-button'}>
-                CONNECT
-            </button>
-        </div>
-    </div>
+type eventButtonProps = {
+    text: string,
 }
 
 type eventFieldProps = {
     text: string,
     size?: string
+}
+
+export const EventButton = ({text}: eventButtonProps) => {
+    return (
+        <button className={'event-button'}>
+            {text}
+        </button>
+    )
 }
 
 export const EventFieldBig = (
@@ -40,14 +40,15 @@ type eventCardProps = {
     description: string,
     datetime: string,
     participantsLimit : number,
-    bannerLink: string
+    bannerLink: string,
+    actionName: string
 }
 
 export const EventCard = (
-    {title, description, datetime, participantsLimit, bannerLink}: eventCardProps) => {
+    {title, description, datetime, participantsLimit, bannerLink, actionName}: eventCardProps) => {
     return (<div className={'event-card'}>
         <div className={'banner'}>
-            <img src={bannerLink} alt={'error'}/>
+            <Image src={bannerLink} alt={'error'} layout={"responsive"} height={150} width={350}/>
         </div>
         <div className={'event-card-content'}>
             <div className={'fields'}>
@@ -55,6 +56,7 @@ export const EventCard = (
                 <EventFieldSmall text={datetime}></EventFieldSmall>
                 <EventFieldSmall text={participantsLimit.toString()}></EventFieldSmall>
                 <EventFieldBig text={description}></EventFieldBig>
+                <EventButton text={actionName}></EventButton>
             </div>
         </div>
     </div>);
@@ -63,14 +65,15 @@ export const EventCard = (
 
 export const MintEventPage = () => {
     return (
-        <div>
+        <div className="bg-gradient-to-r from-purple-500 via-purple-500 to-blue-500">
         <Navbar></Navbar>
             <div style={{display: 'flex', alignItems: "center", flexDirection:'column', alignContent: "center"}}>
                 <EventCard title={'Solana HH'}
                    description={'not a hackathon, just a good event'}
                    datetime={'09/12/1232'}
                    participantsLimit={123}
-                   bannerLink={'hhbanfner.png'}
+                   bannerLink={'/hhbanner.png'}
+                           actionName={'mint an nft'}
                 ></EventCard>
             </div>
             <Footer></Footer>
