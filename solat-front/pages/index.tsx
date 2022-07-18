@@ -70,12 +70,6 @@ const Home: NextPage = () => {
         <meta name="Start saving salad by using poap" content="Solat " />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <header>
-
-
-</header>
-      
       <main className={styles.main}>
        <div class="align-top">
 
