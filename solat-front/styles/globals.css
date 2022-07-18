@@ -39,20 +39,33 @@ a {
   font-size: 18px;
   padding: 10px;
   margin: 10px;
-
 }
+
 .event-field-big {
-  height: 100px;
-  width: 350px;
-  background-color: #444463;
-  color: #eaeaea;
-}
-
-.list-event-card {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 280px;
+  background-color: #444463;
+  color: #eaeaea;
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
   height: 470px;
   width: 340px;
   background-color: #1F66A0;
+}
 
+.event-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
 }

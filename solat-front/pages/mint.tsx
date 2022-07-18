@@ -1,4 +1,6 @@
 import React, {FC} from "react";
+import {Footer, Navbar} from "./index";
+
 
 function Header() {
     return <div className={'header'}>
@@ -43,14 +45,16 @@ type eventCardProps = {
 
 export const EventCard = (
     {title, description, datetime, participantsLimit, bannerLink}: eventCardProps) => {
-    return (<div className={'list-event-card'}>
+    return (<div className={'event-card'}>
         <div className={'banner'}>
+            <img src={bannerLink} alt={'error'}/>
         </div>
-        <div className={'list-event-card-content'}>
+        <div className={'event-card-content'}>
             <div className={'fields'}>
-                <EventFieldSmall text={'event name'}></EventFieldSmall>
-                <EventFieldSmall text={'event description'}></EventFieldSmall>
-                <EventFieldSmall text={'event date'}></EventFieldSmall>
+                <EventFieldSmall text={title}></EventFieldSmall>
+                <EventFieldSmall text={datetime}></EventFieldSmall>
+                <EventFieldSmall text={participantsLimit.toString()}></EventFieldSmall>
+                <EventFieldBig text={description}></EventFieldBig>
             </div>
         </div>
     </div>);
@@ -60,15 +64,16 @@ export const EventCard = (
 export const MintEventPage = () => {
     return (
         <div>
-        <Header></Header>
+        <Navbar></Navbar>
             <div style={{display: 'flex', alignItems: "center", flexDirection:'column', alignContent: "center"}}>
                 <EventCard title={'Solana HH'}
                    description={'not a hackathon, just a good event'}
                    datetime={'09/12/1232'}
                    participantsLimit={123}
-                   bannerLink={'img.png'}
+                   bannerLink={'hhbanfner.png'}
                 ></EventCard>
             </div>
+            <Footer></Footer>
         </div>
     )
 }
